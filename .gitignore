@@ -1,0 +1,14 @@
+# Node
+client/node_modules
+client/dist
+
+# .NET
+**/bin/
+**/obj/
+
+# User files
+*.user
+*.log
+
+# VS
+.vs
