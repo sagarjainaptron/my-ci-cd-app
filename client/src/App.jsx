@@ -4,7 +4,7 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://localhost:7140/api/test")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/test`)
       .then(res => res.json())
       .then(data => setData(data))
       .catch(err => console.error(err));
