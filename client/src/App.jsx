@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 function App() {
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/test`)
-      .then(res => res.json())
-      .then(data => setData(data))
-      .catch(err => console.error(err));
-  }, []);
+ useEffect(() => {
+  fetch(`${import.meta.env.VITE_API_URL}/api/test`)
+    .then(res => res.json())
+    .then(data => setData(data))
+    .catch(err => console.error(err));
+}, []);
+
 
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
