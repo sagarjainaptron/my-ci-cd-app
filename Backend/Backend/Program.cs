@@ -5,9 +5,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.AllowAnyOrigin()
-                  .AllowAnyMethod()
-                  .AllowAnyHeader();
+            policy.WithOrigins("https://my-ci-cd-app-ashy.vercel.app/")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
         });
 });
 
